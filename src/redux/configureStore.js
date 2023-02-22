@@ -2,7 +2,7 @@ import { combineReducers, configureStore } from '@reduxjs/toolkit';
 import messageReducer from './messages/message';
 
 const root = combineReducers({
-  messageReducer
+  messageReducer,
 });
 
 const store = configureStore({ reducer: root });

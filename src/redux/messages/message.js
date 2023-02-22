@@ -15,7 +15,6 @@ export const fetchMessage = () => async (dispatch) => fetch(APIURL)
   .then((res) => res.json())
   .then((data) => {
     dispatch(fullfiled(data));
-    console.log(data.msg)
   });
 
 const messageReducer = (state = [], action) => {

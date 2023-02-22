@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, { useEffect } from 'react';
 // import ReactDOM from 'react-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchMessage } from '../redux/messages/message';
@@ -6,18 +6,17 @@ import { fetchMessage } from '../redux/messages/message';
 function Greeting() {
   const dispatch = useDispatch();
 
-  const random_msg = useSelector(
-    (state) => state.messageReducer
-  )
+  const randomMsg = useSelector(
+    (state) => state.messageReducer,
+  );
 
   useEffect(() => {
     dispatch(fetchMessage());
-  }, [dispatch])
-
+  }, [dispatch]);
 
   return (
-  <p>{random_msg.msg}</p>
+    <p>{randomMsg.msg}</p>
   );
 }
 
-export default Greeting
+export default Greeting;
